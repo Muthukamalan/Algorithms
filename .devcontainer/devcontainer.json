@@ -1,7 +1,7 @@
 {
   "name": "dsa",
   "image": "golang:tip-alpine3.23",
-  "postCreateCommand": "go version & apk add git",
+  "postCreateCommand": "apk add git & go telemetry off",
   "runArgs": [
     "--add-host=host.docker.internal:host-gateway",
     "--rm"
@@ -9,9 +9,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        // "ms-python.vscode-pylance",
-        // "ms-toolsai.jupyter",
-        // "ms-python.python"
+        "golang.Go"
       ],
       "settings": {}
     }
