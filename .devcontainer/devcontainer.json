@@ -1,32 +1,27 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/go .
 {
   "name": "dsa",
-  "image": "golang:tip-alpine3.23",
-  "postCreateCommand": "apk add git & go telemetry off",
-  "runArgs": [
-    "--add-host=host.docker.internal:host-gateway",
-    "--rm"
-  ],
+  "image": "python:alpine",
+  "postCreateCommand": "apk add git",
+  // "containerEnv": {
+  //   "PATH": "/usr/local/go/bin:${containerEnv:PATH}",
+  // },
+  "runArgs": ["--add-host=host.docker.internal:host-gateway", "--rm","--name","PodDSA"],
   "customizations": {
     "vscode": {
       "extensions": [
-        "golang.Go"
+        "ms-python.python",
+        "charliermarsh.ruff"
       ],
-      "settings": {}
+      "settings": {
+        "github.copilot.enable": {
+          "*": false
+        },
+        "github.copilot.chat.welcomeMessage": "never"
+      }
     }
   },
-  //   "features": {
-  //     "ghcr.io/devcontainers/features/go:1": {},
-  //     "ghcr.io/devcontainers/feature-starter/hello:1": {
-  //       "greeting": "Hello"
-  //     },
-  //     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-  //       "version": "latest",
-  //       "enableNonRootDocker": "true",
-  //       "moby": "false",
-  //       "dockerDashCompose": "true"
-  //     }
-  //   },
   "onCreateCommand": "echo OnCreateCmd",
-  // "postStartCommand": "apt update && apt install git make",
   "remoteUser": "root"
 }

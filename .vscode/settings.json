@@ -1,11 +1,25 @@
 {
     "chat.disableAIFeatures": true,
-    "[go]":{
-        "editor.insertSpaces": false,
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": true,
+        "editor.defaultColorDecorators": "never",
+        "editor.formatOnType": true,
         "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        }
+        "editor.wordBasedSuggestions": "off"
     },
-    "telemetry.editStats.enabled": false
+    "telemetry.editStats.enabled": false,
+    "telemetry.editStats.showStatusBar": false,
+    "telemetry.feedback.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "telemetry.editStats.showDecorations": false,
+    "workbench.secondarySideBar.showLabels": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.secondarySideBar.forceMaximized": false,
+    "ruff.enable": true,
+    "ruff.fixAll": true,
+    "ruff.trace.server": "messages",
+    "ruff.format.backend": "uv",
+    "ruff.lineLength": 200,
+    "ruff.showSyntaxErrors": true,
+    "ruff.configurationPreference": "editorFirst"
 }

@@ -1,1 +1,0 @@
-<h1 align="center">Subsequence</h1>
